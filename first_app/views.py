@@ -12,8 +12,8 @@ def page(request, page_num):
     return HttpResponse(f'Вы на странице: {page_num}')
 
 
-def about(request):
-    return HttpResponse(f'{request.headers}')
+# def about(request):
+#     return HttpResponse(f'{request.headers}')
 
 
 def shr(request):
@@ -31,8 +31,15 @@ def json(request):
 
 
 def portfolio(request):
-    return render(request, 'project/index.html')
+    return render(request, 'project/portfolio.html')
 
 
-def index(request):
-    return render(request, 'project/index2.html')
+menu = ["О сайте", "Добавить статью", "Обратная связь", "Войти"]
+
+
+def about(request):
+    return render(request, 'project/about.html', {'menu': menu,
+                                            'title': 'Информация о сайте'})
+def main(request):
+    return render(request, 'project/main.html', {'menu': menu,
+                                            'title': 'Главная страница'})

@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from first_app.views import first_app, about, img1, json, index
+from first_app.views import *
 
 urlpatterns = [
     path('first_app/', first_app),
@@ -7,5 +7,7 @@ urlpatterns = [
     path('about/', about),
     path('img/', img1),
     path('json/', json),
-    path('index/', index, name='main page')
+    path('portfolio/', portfolio, name='portfolio page'),
+    path('', about, name='about page'),
+    path('', main, name='about page'),
 ]
