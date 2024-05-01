@@ -1,0 +1,12 @@
+<noteList>
+	<note id="1">
+		<color>red</color>
+		<pages>48</pages>
+	<type>new</type></note>
+
+	<note id="2">
+		<type>liniya</type>
+		<color>blue</color>
+		<pages>24</pages>
+	</note>
+</noteList>
